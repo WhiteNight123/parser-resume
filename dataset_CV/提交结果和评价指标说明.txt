@@ -1,0 +1,106 @@
+（一）提交格式
+提交结果的文件格式为JSON文件，内容为UTF-8编码的字符串。
+
+将测试集所有简历的解析结果存储在一个字典中，字典结构如下：
+{'idx1': info_dict1,'idx2: info_dict2,...}
+
+idx是简历文件的序列号(字符串格式)，info_dict是简历文件idx的解析结果，info_dict的结构如下：
+{
+	"name": "xx",
+        "age": "xx",
+        "education": "xx",
+        "school": "xx",
+        "work_time": "xx",
+        "match_position": "xx"
+}
+"name"对应的内容是姓名(字符串格式)；
+"age"对应的内容是年龄(字符串格式)；
+"education"对应的内容是最高学历(字符串格式)；
+"school"对应的内容是毕业院校(字符串格式)；
+"work_time"对应的内容是工作年限(字符串格式)；
+"match_position"对应的内容是匹配岗位(字符串格式)，如果未匹配上职位此处为空字符串，如果匹配了多个职位用顿号(、)分开。
+
+
+参考格式
+{
+    "101": {
+        "name": "潘孝东",
+        "age": "23",
+        "education": "本科",
+        "school": "中央戏曲学院",
+        "work_time": "0",
+        "match_position": ""
+    },
+    "102": {
+        "name": "周志合",
+        "age": "27",
+        "education": "本科",
+        "school": "深圳大学",
+        "work_time": "4",
+        "match_position": "产品运营、项目主管"
+    },
+	...
+
+    "300": {
+        "name": "刘力霞",
+        "age": "28",
+        "education": "硕士",
+        "school": "首都经济贸易大学",
+        "work_time": "2",
+        "match_position": "产品运营"
+    },
+}
+
+
+参考python3代码如下
+
+import json
+
+submit_dict = {
+    "101": {
+        "name": "潘孝东",
+        "age": "23",
+        "education": "本科",
+        "school": "中央戏曲学院",
+        "work_time": "0",
+        "match_position": ""
+    },
+    "102": {
+        "name": "周志合",
+        "age": "27",
+        "education": "本科",
+        "school": "深圳大学",
+        "work_time": "4",
+        "match_position": "产品运营、项目主管"
+    },
+    "103": {
+        "name": "刘力霞",
+        "age": "28",
+        "education": "硕士",
+        "school": "首都经济贸易大学",
+        "work_time": "2",
+        "match_position": "产品运营"
+    },
+}
+with open("submit_example.json", 'w', encoding='utf-8') as fi:
+    json.dump(submit_dict, fi, indent=4, ensure_ascii=False)
+
+
+
+（二）评价指标
+
+指标1 信息抽取准确率precision
+precision = (crr_name_num + crr_age_num + crr_education_num + crr_school_num + crr_work_time_num)/ total_num
+其中crr_xx_num是某字段正确的个数，total_num是测试集所有字段的总数。
+
+
+指标2 岗位匹配F-Score
+recall = ΣTP_ij/(ΣTP_ij + ΣFN_ij)
+precision = ΣTP_ij/(ΣTP_ij+ΣFP_ij)
+F-Score_ij = 2*precision*recall/(precision + recall)
+
+
+TP_ij（True Positive）： 正确的匹配，简历i能正确匹配岗位j，并且被预测为匹配。
+FN_ij（False Negative）：错误的不匹配，简历i能正确匹配岗位j，但被预测为不匹配。
+FP_ij（False Positive）：错误的匹配，简历i不能匹配岗位j，但被预测为匹配。
+TN_ij（True Negative）： 正确的不匹配，简历i不能匹配岗位j，并且被预测为不匹配。
