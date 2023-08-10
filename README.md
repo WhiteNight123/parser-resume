@@ -33,32 +33,37 @@ $ source venv/bin/activate
 
 ## 项目架构
 
-系统模块图
+**系统模块图**
 
-<img src="https://s2.loli.net/2023/07/16/SnRdYvACDWjfL6E.png" alt="image-20230716084200977" width="700px" />
+<p align="center"><img src="https://s2.loli.net/2023/07/16/SnRdYvACDWjfL6E.png" alt="image-20230716084200977" width="700px" /></p>
 
-系统用例模型图
+**系统用例模型图**
 
-<img src="https://s2.loli.net/2023/07/16/BIoZCywhA9vJduk.png" alt="image-20230716084400646" width="500px" />
+<p align="center"><img src="https://s2.loli.net/2023/07/16/BIoZCywhA9vJduk.png" alt="image-20230716084400646" width="500px" /></p>
 
-系统流程图
+**系统流程图**
 
-<img src="https://s2.loli.net/2023/07/16/sDib4QZk2YlIPEA.png" alt="image-20230716084220419" width="500px" />
+<p align="center"><img src="https://s2.loli.net/2023/07/16/sDib4QZk2YlIPEA.png" alt="image-20230716084220419" width="500px" /></p>
 
-系统时序图
+**系统时序图**
 
-<img src="https://s2.loli.net/2023/07/16/ehf7OX8yFAJSGQK.png" alt="image-20230716084301767" width="500px" />
+<p align="center"><img src="https://s2.loli.net/2023/07/16/ehf7OX8yFAJSGQK.png" alt="image-20230716084301767" width="500px" /></p>
 
 ## 界面运行结果
 
-<img src="https://s2.loli.net/2023/07/15/xobhWt7NiD9QTZU.png" alt="界面1" width="300px" />
+**文件上传界面**
+<p align="center"><img src="https://s2.loli.net/2023/07/15/xobhWt7NiD9QTZU.png" alt="界面1" width="300px" /></p>
 
-<img src="https://s2.loli.net/2023/07/15/QpEFk7MB1NIA2Oi.png" alt="界面2" width="300px" />
+**手动输入界面**
+<p align="center"><img src="https://s2.loli.net/2023/07/15/QpEFk7MB1NIA2Oi.png" alt="界面2" width="300px" /></p>
 
-<img src="https://s2.loli.net/2023/07/15/K7ExgRjbIFqCndt.png" alt="界面3" width="300px"/>
+**基本信息界面**
+<p align="center"><img src="https://s2.loli.net/2023/07/15/K7ExgRjbIFqCndt.png" alt="界面3" width="300px"/></p>
 
-<img src="https://s2.loli.net/2023/07/15/ZYlsaJKOjV5zXrD.png" alt="界面4" width="300px" />
+**人才画像界面**
+<p align="center"><img src="https://s2.loli.net/2023/07/15/ZYlsaJKOjV5zXrD.png" alt="界面4" width="300px" /></p>
 
-<img src="https://s2.loli.net/2023/07/15/X4nlO7RgAqszWIU.png" alt="界面5" width="300px"/>
+**统计可视化界面**
+<p align="center"><img src="https://s2.loli.net/2023/07/15/X4nlO7RgAqszWIU.png" alt="界面5" width="300px"/></p>
 
-<img src="https://s2.loli.net/2023/07/15/usRgjdGKIWL5SAt.png" alt="界面6" width="300px" />
+<p align="center"><img src="https://s2.loli.net/2023/07/15/usRgjdGKIWL5SAt.png" alt="界面6" width="300px" /></p>
