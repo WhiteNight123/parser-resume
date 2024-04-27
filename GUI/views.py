@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QDialog, QFileDialog
 from PyQt6.QtCore import QThread
-from PyQt6.QtGui import QPixmap, QFont
+from PyQt6.QtGui import QPixmap
 from .jianli import JianLi
 from functools import partial
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -240,7 +240,7 @@ class Result_Dialog(QDialog, Ui_Dialog):
         self.name_text.setText(data['姓名'])
         self.birthday_text.setText(data['出生年月'])
         self.age_text.setText(data['年龄'])
-        self.political_text.setText('群众')
+        self.political_text.setText(data['政治面貌'])
         self.degree_text.setText(data['最高学历'])
         self.phone_text.setText(data['电话'])
         self.school_text.setText(data['毕业院校'])
